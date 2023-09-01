@@ -11,7 +11,7 @@ const multiBar = new cliProgress.MultiBar(
     hideCursor: true,
     format: colors.cyan('{bar}') + ' | {filename} | {percentage}%',
   },
-  cliProgress.Presets.rect
+  cliProgress.Presets.rect,
 )
 
 export const getThumbnail = async (id: number, mediaId: number) => {
@@ -38,7 +38,7 @@ export const getThumbnail = async (id: number, mediaId: number) => {
   })
 }
 
-export const getImage = async (id: number, mediaId: number, pages: Image[], limit: number | null) => {
+export const getImage = (id: number, mediaId: number, pages: Image[], limit: number | null) => {
   const maxPages = limit ?? pages.length
 
   for (let i = 1; i <= maxPages; i++) {

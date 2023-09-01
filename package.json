@@ -4,7 +4,8 @@
   "description": "a cli tool for hifumin inspired by Mangal",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "lint": "eslint src --ext ts --config .eslintrc.cjs"
   },
   "keywords": [],
   "author": "mirailisc",
@@ -19,6 +20,12 @@
     "@types/cli-progress": "^3.11.0",
     "@types/inquirer": "^8.0.0",
     "@types/node": "^20.5.7",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   }

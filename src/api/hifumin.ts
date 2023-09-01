@@ -18,7 +18,7 @@ export const fetchApi = async <const T extends IHen>(id: number): Promise<T> => 
       },
       {
         headers: options,
-      }
+      },
     )
 
     resData = await data.data.nhentai.by

@@ -1,5 +1,3 @@
-import { PromptModuleBase } from 'inquirer'
-
 export const promptQuestions = [
   {
     type: 'input',
