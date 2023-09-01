@@ -1,14 +1,15 @@
 {
   "name": "hifumin-cli",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "a cli tool for hifumin inspired by Mangal",
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "lint": "eslint src --ext ts --config .eslintrc.cjs"
+    "lint": "eslint src --ext ts --config .eslintrc.cjs",
+    "semantic-release": "semantic-release"
   },
   "repository": {
-    "url": "git+https://github.com/Mirailisc/hifumin-cli"
+    "url": "https://github.com/Mirailisc/hifumin-cli"
   },
   "release": {
     "branches": [
