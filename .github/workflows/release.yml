@@ -1,0 +1,36 @@
+name: Release
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      security-events: write
+      actions: write
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Checkout pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js with pnpm
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - run: pnpx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
