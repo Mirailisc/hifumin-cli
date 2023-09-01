@@ -1,4 +1,4 @@
-#!/usr/bin/env ts-node
+#!/usr/bin/env node
 
 import { fetchApi } from './api/hifumin'
 import { getImage, getThumbnail } from './api/nhen'
