@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { EXPORT_NH_PATH, FILE_COVER_PATH, FILE_IMAGE_PATH, NH_IMAGE_URL, NH_THUMBNAIL_URL } from '../config/constants'
-import fs from 'fs'
+import * as fs from 'fs'
 import { Image } from '../types/nhen'
-import cliProgress from 'cli-progress'
+import * as cliProgress from 'cli-progress'
 import colors from 'ansi-colors'
 
 const multiBar = new cliProgress.MultiBar(

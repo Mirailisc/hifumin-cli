@@ -1,10 +1,12 @@
+#!/usr/bin/env ts-node
+
 import { fetchApi } from './api/hifumin'
 import { getImage, getThumbnail } from './api/nhen'
-import fs from 'fs'
+import * as fs from 'fs'
 import { EXPORT_DIR, EXPORT_NH_PATH } from './config/constants'
-import inquirer from 'inquirer'
+import * as inquirer from 'inquirer'
 import { promptQuestions } from './config/prompt'
-import ansiColors from 'ansi-colors'
+import colors from 'ansi-colors'
 
 const run = async (id: number, pageLimit: number | null) => {
   const res = await fetchApi(id)
@@ -27,7 +29,7 @@ const run = async (id: number, pageLimit: number | null) => {
 
 const prompt = inquirer.createPromptModule()
 
-console.log(ansiColors.magenta('Hifumin Cli'))
+console.log(colors.magenta('Hifumin Cli'))
 
 prompt(promptQuestions).then((answer) => {
   const id = parseInt(answer.id)
