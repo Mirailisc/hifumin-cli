@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FILE_COVER_PATH = exports.FILE_IMAGE_PATH = exports.EXPORT_NH_PATH = exports.EXPORT_DIR = exports.NH_THUMBNAIL_URL = exports.NH_IMAGE_URL = exports.GQL_ENDPOINT = void 0;
+exports.GQL_ENDPOINT = 'https://api.hifumin.app/v1/graphql';
+exports.NH_IMAGE_URL = 'https://i.nhentai.net/galleries/{mediaId}/{page}.jpg';
+exports.NH_THUMBNAIL_URL = 'https://t.nhentai.net/galleries/{mediaId}/cover.jpg';
+exports.EXPORT_DIR = 'exports/';
+exports.EXPORT_NH_PATH = exports.EXPORT_DIR + '{id}';
+exports.FILE_IMAGE_PATH = '{page}.jpg';
+exports.FILE_COVER_PATH = 'cover.jpg';
