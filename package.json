@@ -6,7 +6,8 @@
   "bin": "./dist/index.js",
   "types": "./src/index.ts",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start:dev": "ts-node src/index.ts",
+    "start:js": "node dist/index.js",
     "build": "tsc -p .",
     "lint": "eslint src --ext ts --config .eslintrc.cjs",
     "semantic-release": "semantic-release"
