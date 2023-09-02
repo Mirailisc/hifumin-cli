@@ -1,10 +1,11 @@
 import axios from 'axios'
-import { IHen } from '../types/nhen'
-import { GQL_ENDPOINT } from '../config/constants'
-import { getPagesById } from '../gql/nh'
-import { options } from '../config/axios-options'
 
-export const fetchApi = async <const T extends IHen>(id: number): Promise<T> => {
+import { IHifuminPage } from '../types/hifumin'
+import { GQL_ENDPOINT } from '../config/constants'
+import { getPagesById } from '../gql/hifumin'
+import { axiosOptions } from '../config/axios-options'
+
+export const fetchApi = async <const T extends IHifuminPage>(id: number): Promise<T> => {
   let resData: T | null = null
 
   try {
@@ -17,7 +18,7 @@ export const fetchApi = async <const T extends IHen>(id: number): Promise<T> => 
         },
       },
       {
-        headers: options,
+        headers: axiosOptions,
       },
     )
 

@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
-import { fetchApi } from './api/hifumin'
-import { getImage, getThumbnail } from './api/nhen'
 import * as fs from 'fs'
-import { EXPORT_DIR, EXPORT_NH_PATH } from './config/constants'
 import * as inquirer from 'inquirer'
-import { promptQuestions } from './config/prompt'
 import colors from 'ansi-colors'
+
+import { fetchApi } from './api/hifumin'
+import { getImage, getThumbnail } from './api/images'
+import { EXPORT_DIR, EXPORT_NH_PATH } from './config/constants'
+import { promptQuestions } from './config/prompt'
 
 const run = async (id: number, pageLimit: number | null) => {
   const res = await fetchApi(id)
@@ -24,7 +25,7 @@ const run = async (id: number, pageLimit: number | null) => {
 
   fs.mkdirSync(exportPath)
   await getThumbnail(res.id, res.mediaId)
-  await getImage(res.id, res.mediaId, res.images.pages, pageLimit)
+  getImage(res.id, res.mediaId, res.images.pages, pageLimit)
 }
 
 const prompt = inquirer.createPromptModule()

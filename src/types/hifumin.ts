@@ -1,4 +1,4 @@
-export interface IHen {
+export interface IHifuminPage {
   id: number
   numPages: number
   mediaId: number

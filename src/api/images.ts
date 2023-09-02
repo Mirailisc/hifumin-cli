@@ -1,17 +1,18 @@
 import axios from 'axios'
-import { EXPORT_NH_PATH, FILE_COVER_PATH, FILE_IMAGE_PATH, NH_IMAGE_URL, NH_THUMBNAIL_URL } from '../config/constants'
 import * as fs from 'fs'
-import { Image } from '../types/nhen'
 import * as cliProgress from 'cli-progress'
 import colors from 'ansi-colors'
+
+import { EXPORT_NH_PATH, FILE_COVER_PATH, FILE_IMAGE_PATH, NH_IMAGE_URL, NH_THUMBNAIL_URL } from '../config/constants'
+import { Image } from '../types/hifumin'
 
 const multiBar = new cliProgress.MultiBar(
   {
     clearOnComplete: false,
     hideCursor: true,
-    format: colors.cyan('{bar}') + ' | {filename} | {percentage}%',
+    format: `{filename} | ${colors.cyan('{bar}')} | {percentage}%`,
   },
-  cliProgress.Presets.rect,
+  cliProgress.Presets.legacy,
 )
 
 export const getThumbnail = async (id: number, mediaId: number) => {
