@@ -31,12 +31,12 @@ export const getThumbnail = async (id: number, mediaId: number) => {
     },
   })
 
-  return new Promise((resolve, reject) => {
-    res.data
-      .pipe(fs.createWriteStream(exportPath + FILE_COVER_PATH))
-      .on('error', reject)
-      .once('close', () => resolve(exportPath + FILE_COVER_PATH))
-  })
+  try {
+    await res.data.pipe(fs.createWriteStream(exportPath + FILE_COVER_PATH))
+  } catch (err) {
+    console.error(err)
+    process.exit(1)
+  }
 }
 
 export const getImage = (id: number, mediaId: number, pages: Image[], limit: number | null) => {
@@ -63,7 +63,7 @@ export const getImage = (id: number, mediaId: number, pages: Image[], limit: num
       })
 
       try {
-        return res.data.pipe(fs.createWriteStream(exportPath + fileImagePath))
+        await res.data.pipe(fs.createWriteStream(exportPath + fileImagePath))
       } catch (err) {
         console.error(err)
         process.exit(1)

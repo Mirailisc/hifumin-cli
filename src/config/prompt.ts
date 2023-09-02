@@ -15,12 +15,12 @@ export const promptQuestions = [
   {
     type: 'confirm',
     name: 'limit',
-    message: 'Do you want to limit downloaded page?',
+    message: 'Do you want to limit the number of downloaded pages?',
   },
   {
     type: 'input',
     name: 'limitPage',
-    message: 'Please set the limit of downloaded page',
+    message: 'Please set the limit for downloaded pages',
     when: (answer: any) => answer.limit === true,
     validate: (answer: any) => {
       if (isNaN(answer)) {

@@ -10,6 +10,9 @@ query GET_PAGES_BY_ID($id: Int!) {
         english
         japanese
       }
+      tags {
+        name
+      }
       images {
         pages {
           t

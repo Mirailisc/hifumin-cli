@@ -5,5 +5,7 @@ export const NH_THUMBNAIL_URL = 'https://t.nhentai.net/galleries/{mediaId}/cover
 
 export const EXPORT_DIR = 'hifumin/'
 export const EXPORT_NH_PATH = EXPORT_DIR + '{id}'
+
 export const FILE_IMAGE_PATH = '{page}.jpg'
 export const FILE_COVER_PATH = 'cover.jpg'
+export const FILE_INFO_PATH = 'info.yaml'
