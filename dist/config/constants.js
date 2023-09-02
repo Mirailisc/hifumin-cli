@@ -4,7 +4,7 @@ exports.FILE_COVER_PATH = exports.FILE_IMAGE_PATH = exports.EXPORT_NH_PATH = exp
 exports.GQL_ENDPOINT = 'https://api.hifumin.app/v1/graphql';
 exports.NH_IMAGE_URL = 'https://i.nhentai.net/galleries/{mediaId}/{page}.jpg';
 exports.NH_THUMBNAIL_URL = 'https://t.nhentai.net/galleries/{mediaId}/cover.jpg';
-exports.EXPORT_DIR = 'exports/';
+exports.EXPORT_DIR = 'hifumin/';
 exports.EXPORT_NH_PATH = exports.EXPORT_DIR + '{id}';
 exports.FILE_IMAGE_PATH = '{page}.jpg';
 exports.FILE_COVER_PATH = 'cover.jpg';
