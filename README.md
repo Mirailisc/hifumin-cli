@@ -33,3 +33,5 @@ pnpm install
 ```bash
 pnpm start
 ```
+
+![nihahaha](https://github.com/Mirailisc/hifumin-cli/assets/45442561/2110578b-4afa-4cde-9b20-976722818e13)
