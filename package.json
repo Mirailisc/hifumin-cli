@@ -4,14 +4,20 @@
   "description": "a cli tool for hifumin inspired by Mangal",
   "main": "./dist/index.js",
   "bin": "./dist/index.js",
+  "types": "./src/index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc -p .",
     "lint": "eslint src --ext ts --config .eslintrc.cjs",
     "semantic-release": "semantic-release"
   },
+  "url": "https://github.com/Mirailisc/hifumin-cli",
   "repository": {
     "url": "https://github.com/Mirailisc/hifumin-cli"
+  },
+  "author": {
+    "name": "Mirailisc",
+    "url": "https://github.com/Mirailisc"
   },
   "release": {
     "branches": [
@@ -40,8 +46,10 @@
       ]
     ]
   },
-  "keywords": [],
-  "author": "mirailisc",
+  "keywords": [
+    "hifumin",
+    "hifumin.app"
+  ],
   "license": "MIT",
   "dependencies": {
     "ansi-colors": "^4.1.3",
