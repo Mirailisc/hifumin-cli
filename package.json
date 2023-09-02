@@ -1,6 +1,6 @@
 {
   "name": "hifumin-cli",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "a cli tool for hifumin inspired by Mangal",
   "main": "./dist/index.js",
   "bin": "./dist/index.js",
