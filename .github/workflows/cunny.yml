@@ -14,9 +14,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 177013
+      - name: Gay
         uses: CunnyDev/177013-commits@main
         with:
-          commits: 177013
           git-name: Mirailisc
           git-email: mirailisclm@gmail.com
