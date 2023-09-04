@@ -8,12 +8,12 @@ export interface IHifuminPage {
     japanese: string
   }
   images: {
-    pages: Image[]
+    pages: IHifuminPageImage[]
   }
   tags: Tag[]
 }
 
-export interface Image {
+export interface IHifuminPageImage {
   t: string
   w: number
   h: number

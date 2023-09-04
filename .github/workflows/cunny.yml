@@ -1,0 +1,22 @@
+name: SayGex
+
+on:
+  workflow_dispatch:
+
+jobs:
+  bruh:
+    name: Most important CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 177013
+        uses: CunnyDev/177013-commits@main
+        with:
+          commits: 177013
+          git-name: Mirailisc
+          git-email: mirailisclm@gmail.com

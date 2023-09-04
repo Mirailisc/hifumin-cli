@@ -4,7 +4,7 @@ import * as cliProgress from 'cli-progress'
 import colors from 'ansi-colors'
 
 import { EXPORT_NH_PATH, FILE_COVER_PATH, FILE_IMAGE_PATH, NH_IMAGE_URL, NH_THUMBNAIL_URL } from '../config/constants'
-import { Image } from '../types/hifumin'
+import { IHifuminPageImage } from '../types/hifumin'
 
 const multiBar = new cliProgress.MultiBar(
   {
@@ -39,7 +39,7 @@ export const getThumbnail = async (id: number, mediaId: number) => {
   }
 }
 
-export const getImage = (id: number, mediaId: number, pages: Image[], limit: number | null) => {
+export const getImage = (id: number, mediaId: number, pages: IHifuminPageImage[], limit: number | null) => {
   const maxPages = limit ?? pages.length
 
   for (let i = 1; i <= maxPages; i++) {
@@ -54,7 +54,6 @@ export const getImage = (id: number, mediaId: number, pages: Image[], limit: num
         responseType: 'stream',
         onDownloadProgress: ({ progress }) => {
           progressBar.start(1, 0)
-
           progressBar.increment()
           progressBar.update(progress as number, { filename: `${i}.jpg` })
 
